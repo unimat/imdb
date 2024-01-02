@@ -5,21 +5,6 @@ const API_KEY = process.env.API_KEY
 export default async function Home({searchParams}) {
   const genre = searchParams.genre || "fetchTrending";
 
-  //**Authentication with Bearer token**//
-  // const url = `https://api.themoviedb.org/3/${
-  //   genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
-  // }?language=en-US&page=1&sort_by=created_at.asc`
-
-  // const options = {
-  //   method: 'GET',
-  //   headers: {
-  //     accept: 'application/json',
-  //     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YmFkNzBkOGJiYjdjODQyNDQzMjE0MDZmYjczNDg2ZCIsInN1YiI6IjY1OTE2NDFkNmFhOGUwNjI3N2VhY2Q5NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2ZCphL-zsPsfaxS6uFXwEP-J46DnVuy7SO6_NEgCxS4'
-  //   }
-  // };
-
-  // const res = await fetch( url, options)
-
   //**Authentication with API Key**//
   const url = `https://api.themoviedb.org/3/${
     genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
